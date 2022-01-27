@@ -118,7 +118,7 @@
     width: 135px;
     height: 225px;
     bottom: 0px;
-    left: 1145px;
+    left: 1090px;
 }
 #escena_01 .soldado{
     background-image: url("../img/robin_hood/robin_sprite_01_soldado.png");
@@ -576,7 +576,7 @@
 
 #escena_00 .btn_interact{ top: 570px; left: 1350px; }
 
-#escena_01 .btn_interact{ top: 600px; left: 850px; }
+#escena_01 .btn_interact{ top: 600px; left: 820px; }
 
 #escena_02 .btn_interact{ top: 390px; left: 480px; }
 

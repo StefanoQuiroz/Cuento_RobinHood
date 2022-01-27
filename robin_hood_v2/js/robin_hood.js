@@ -728,7 +728,41 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             .addCallback(function(){  /*nada*/  },'+=2')
             .addLabel('final')
              ;
-            ANIM.anim_interact_0.pause();
+        ANIM.anim_interact_0.pause();
+
+        ANIM.anim_interact_1 = new TimelineMax(); // creo la interacción
+        ANIM.anim_interact_1
+            .addLabel('inicio')
+            .addCallback(function(){
+                Player.playSoundFX('llanto_mujer');
+                ANIM.fadeVolume('llanto_mujer',1,0,5);
+            }, 0)
+            //Señora y cobrador
+            .fromTo(`#escena_01 .senora_cobrador`,2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-1100% 0%`, ease:SteppedEase.config(11), repeat:1}, 0)
+            .addCallback(function(){
+                Player.playSoundFX('llanto_chicos');
+                ANIM.fadeVolume('llanto_chicos',1,0,5);
+                //Player.cambiaVolume('llanto_chicos',0.6);
+             }, 0)
+            //Niños
+            .fromTo(`#escena_01 .de_rosa`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:1}, 2)
+            .fromTo(`#escena_01 .de_azul`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:1}, 2)
+
+            .addCallback(function(){
+                Player.playSoundFX('monedas2');
+                ANIM.fadeVolume('monedas2',1,0,5);
+                //Player.cambiaVolume('llanto_chicos',0.6);
+             }, "-=0.5")
+            //rey y soldado
+            .fromTo(`#escena_01 .principe`,1.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:1}, 4)
+            .fromTo(`#escena_01 .soldado`,2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-700% 0%`, ease:SteppedEase.config(7)}, 4)
+            //Campesino
+            .fromTo(`#escena_01 .en_la_puerta`,0.8,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 5)
+            //Niño de amarillo
+            .fromTo(`#escena_01 .de_amarillo`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 7)
+            .fromTo(`#escena_01 .vagabundo`,0.3,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:2}, 7)
+            .addLabel('final');
+        ANIM.anim_interact_1.pause();
         
     
             ANIM.anim_interact_2 = new TimelineMax();
@@ -973,6 +1007,7 @@ SteppedEase.config(1),immediateRender:false})
         
         ANIM.arr_interacts = [
             ANIM.anim_interact_0,
+            ANIM.anim_interact_1,
             ANIM.anim_interact_2,
             ANIM.anim_interact_4,
             ANIM.anim_interact_5,
@@ -1106,14 +1141,9 @@ SteppedEase.config(1),immediateRender:false})
              case 1:
                  btn.click(function(){
                         $(this).css({"display":"none"});
-                        ANIM.animaEscena1();
-                        Player.playSoundFX('llanto_chicos',true);
-                        ANIM.fadeVolume('llanto_chicos',0,1,7);
-                        Player.playSoundFX('llanto_mujer',true);
-                        ANIM.fadeVolume('llanto_mujer',0,1,7);
-                     //(cual, waitFor=4, cuantoDura=14, cuantasVeces = 1, cuantoDejoAlFinal = 0, volume=1, fade = false, fadeFrom = 12, volFadeTo = 0) => {
-                     ANIM.waitForSound('monedas1',0.5,1.47,0,0.2,0.4);
-                     ANIM.waitForSound('monedas2',0.1,1.7,0,2.7);
+                        ANIM.anim_interact_1.eventCallback("onComplete", muestralo, [$(this), cb]);   
+                        ANIM.anim_interact_1.play(0);
+                     
                 });
                 break;
             case 2:
