@@ -1,0 +1,604 @@
+.creditos .imagen_portada,
+#final_cuento .creditos .imagen_portada{
+/*    background-image: url(../img/robin_hood/imagen_portada.jpg);*/
+/*
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+*/
+/*    background-color: #fff;*/
+}
+
+.sprite{ 
+    background-image: url("../img/robin_hood/robin_sprite_0.png");
+/*    background-color: rgba(255,255,0,0.5);*/
+}
+
+#escena_00 .fondo{ 
+    background-image: url("../img/robin_hood/robin_fondo_esc0.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_01.jpg");*/
+}
+#escena_00 .principe{
+    background-image: url("../img/robin_hood/robin_sprite_00_principe.png");
+    width: 266px;
+    height: 237px;
+    top: 643px;
+    left: 770px;
+}
+#escena_00 .cocinero{
+    background-image: url("../img/robin_hood/robin_sprite_00_cocinero.png");
+    width: 235px;
+    height: 343px;
+    bottom: -10px;
+    left: 1308px;
+}
+#escena_00 .sirvienta{
+    background-image: url("../img/robin_hood/robin_sprite_00_sirvienta.png");
+    width: 163px;
+    height: 283px;
+    bottom: -10px;
+    left: 1640px;
+}
+#escena_00 .mesa{
+    width: 685px;
+    height: 301px;
+    top: 623px;
+    left: 672px;
+}
+
+#escena_01 .fondo{ 
+    background-image: url("../img/robin_hood/robin_fondo_esc1.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_02A.jpg");*/
+/*    background-image: url("../img/robin_hood/normalizado_02B.jpg");*/
+}
+#escena_01 .interact{
+    left: -209px;
+    width: 2000px;
+}
+#escena_01 .gato{
+    background-image: url("../img/robin_hood/robin_sprite_01_gato.png");
+    width: 111px;
+    height: 126px;
+    top: 34px;
+    left: 26px;
+}
+#escena_01 .desnudo{
+    background-image: url("../img/robin_hood/robin_sprite_01_desnudo.png");
+    width: 45px;
+    height: 117px;
+    top: 805px;
+    left: 22px;
+}
+#escena_01 .de_rosa{
+    background-image: url("../img/robin_hood/robin_sprite_01_nena_rosado.png");
+    width: 62px;
+    height: 125px;
+    top: 755px;
+    left: 197px;
+}
+#escena_01 .de_azul{
+    background-image: url("../img/robin_hood/robin_sprite_01_de_azul.png");
+    width: 46px;
+    height: 117px;
+    top: 734px;
+    left: 412px;
+}
+
+#escena_01 .de_amarillo{
+    background-image: url("../img/robin_hood/robin_sprite_01_de_amarillo.png");
+    width: 46px;
+    height: 128px;
+    top: 605px;
+    left: 880px;
+}
+
+#escena_01 .senora_cobrador{
+    background-image: url("../img/robin_hood/robin_sprite_01_senora_cobrador.png");
+    width: 310px;
+    height: 304px;
+    top: 675px;
+    left: 304px;
+}
+#escena_01 .en_la_puerta{
+    background-image: url("../img/robin_hood/robin_sprite_01_en_la_puerta.png");
+    width: 99px;
+    height: 189px;
+    top: 540px;
+    left: 1295px;
+}
+#escena_01 .vagabundo{
+    background-image: url("../img/robin_hood/robin_sprite_01_vagabundo.png");
+    width: 71.6px;
+    height: 112px;
+    top: 620px;
+    left: 1818px;
+}
+#escena_01 .principe{
+    background-image: url("../img/robin_hood/robin_sprite_01_principe.png");
+    width: 135px;
+    height: 225px;
+    bottom: 0px;
+    left: 1145px;
+}
+#escena_01 .soldado{
+    background-image: url("../img/robin_hood/robin_sprite_01_soldado.png");
+    width: 311px;
+    height: 328px;
+    bottom: 0px;
+    left: 1360px;
+}
+
+#escena_02 .fondo{ 
+    background-image: url("../img/robin_hood/robin_fondo_esc2.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_03.jpg");*/
+}
+#escena_02 .robin{
+    background-image: url("../img/robin_hood/robin_sprite_02_robin.png");
+    width: 413px;
+    height: 477px;
+    top: 488px;
+    left: -2px;
+    
+}
+#escena_02 .carruaje{
+    background-image: url("../img/robin_hood/robin_sprite_02_carruaje.png");
+    width: 471.5px;
+    height: 332px;
+    top: 589px;
+    left: 1025px;
+/*    background-color: rgba(2,52,79,0.1);*/
+}
+#escena_03 .fondo{ 
+    background-image: url("../img/robin_hood/robin_fondo_esc3.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_04B.jpg");*/
+}
+#escena_03 .de_violeta{
+    background-image: url("../img/robin_hood/robin_sprite_03_de_violeta.png");
+    width: 70.5px;
+    height: 134px;
+    top: 589px;
+    left: 47px;
+}
+#escena_03 .senora1{
+    background-image: url("../img/robin_hood/robin_sprite_03_senora.png");
+    width: 68.5px;
+    height: 117px;
+    top: 575px;
+    left: 177px;
+}
+#escena_03 .senora2{
+    background-image: url("../img/robin_hood/robin_sprite_03_senora2.png");
+    width: 82px;
+    height: 116px;
+    top: 445px;
+    left: 367px;
+}
+#escena_03 .nene{
+    background-image: url("../img/robin_hood/robin_sprite_03_nene.png");
+    width: 26.6px;
+    height: 67px;
+    top: 445px;
+    left: 647px;
+}
+#escena_03 .nena{
+    background-image: url("../img/robin_hood/robin_sprite_03_nena.png");
+    width: 56.6px;
+    height: 64px;
+    top: 755px;
+    left: 720px;
+}
+
+#escena_03 .de_verde{
+    background-image: url("../img/robin_hood/robin_sprite_03_de_verde.png");
+    width: 83px;
+    height: 124px;
+    top: 385px;
+    left: 864px;
+}
+#escena_03 .gato{
+    background-image: url("../img/robin_hood/robin_sprite_03_gato.png");
+    width: 232px;
+    height: 357px;
+    top: 605px;
+    left: 1700px;
+}
+#escena_03 .robin{
+    background-image: url("../img/robin_hood/robin_sprite_03_robin.png");
+    width: 376px;
+    height: 456px;
+    bottom: 0px;
+    left: 1150px;
+}
+
+#escena_04 .fondo{ 
+      background-image: url("../img/robin_hood/robin_fondo_esc4.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_05A.jpg");*/
+/*    background-image: url("../img/robin_hood/normalizado_05B.jpg");*/
+}
+#escena_04 .dorado{
+    background-image: url("../img/robin_hood/robin_sprite_04_dorado.png");
+    width: 480.6px;
+    height: 512px;
+    top: 300px;
+    left: -30px;
+}
+#escena_04 .principe{
+    background-image: url("../img/robin_hood/robin_sprite_04_principe.png");
+    width: 862.5px;
+    height: 512px;
+    bottom: -75px;
+    left: 65px;
+    background-repeat: repeat-x;
+}
+#escena_04 .soldado1{
+    background-image: url("../img/robin_hood/robin_sprite_04_soldado1.png");
+    width: 363px;
+    height: 512px;
+    top: 888px;
+    left: 1190px;
+/*    display: none;*/
+}
+#escena_04 .soldado2{
+    background-image: url("../img/robin_hood/robin_sprite_04_soldado2.png");
+    width: 395.5px;
+    height:379px;
+    bottom: -50px;
+    right: -35px;
+}
+#escena_04 .soldado3{
+    background-image: url("../img/robin_hood/robin_sprite_04_soldado3.png");
+    width: 369px;
+    height:312px;
+    bottom: -20px;
+    right: 279px;
+}
+#escena_04 .soldado4{
+    background-image: url("../img/robin_hood/robin_sprite_04_soldado4.png");
+    width: 333.25px;
+    height:391px;
+    bottom: -55px;
+    left: -250px;
+}
+#escena_04 .fuegos{
+    width: 100px;
+    height: 50px;
+    top: 293px;
+    left: 530px;
+/*    background-color: rgba(255,25,0,0.4);*/
+}
+#escena_04 .fuego{
+    background-image: url("../img/robin_hood/robin_sprite_04_fuego.png");
+    width: 23px;
+    height: 44px;
+}
+
+#escena_04 .fuegoA{
+    left: 0px;
+}
+#escena_04 .fuegoB{
+    left: 35px;
+    top: -12px;
+}
+#escena_04 .fuegoC{
+    left: 74px;
+    top: 2px;
+}
+
+#escena_05 .fondo{ 
+         background-image: url("../img/robin_hood/robin_fondo_esc5.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_06.jpg");*/
+}
+#escena_05 .hombre1{
+    background-image: url("../img/robin_hood/robin_sprite_05_hombre1.png");
+    width: 75px;
+    height: 124px;
+    top: 435px;
+    left: -6px;
+}
+#escena_05 .hombre2{
+    background-image: url("../img/robin_hood/robin_sprite_05_hombre2.png");
+    width: 84px;
+    height: 124px;
+    top: 584px;
+    left: 238px;
+}
+#escena_05 .mujer{
+    background-image: url("../img/robin_hood/robin_sprite_05_mujer.png");
+    width: 92.5px;
+    height: 162px;
+    top: 675px;
+    left: 397px;
+}
+#escena_05 .soldado1{
+    background-image: url("../img/robin_hood/robin_sprite_05_soldado1.png");
+    width: 97px;
+    height: 197px;
+    top: 510px;
+    left: 1213px;
+}
+#escena_05 .soldado2{
+    background-image: url("../img/robin_hood/robin_sprite_05_soldado2.png");
+    width: 114px;
+    height: 202px;
+    top: 430px;
+    left: 1345px;
+}
+#escena_05 .soldado3{
+    background-image: url("../img/robin_hood/robin_sprite_05_soldado3.png");
+    width: 101px;
+    height: 203px;
+    top: 406px;
+    left: 1724px;
+}
+#escena_05 .principe{
+    background-image: url("../img/robin_hood/robin_sprite_05_principe.png");
+    width: 92px;
+    height: 146px;
+    top: 453px;
+    left: 1515px;
+}
+#escena_05 .palco1{
+    width: 763px;
+    height: 321px;
+    top: 413px;
+    right: 0px;
+    background-position: -686px 0px;
+}
+#escena_05 .palco2,
+#escena_06 .palco1{
+    width: 595px;
+    height: 393px;
+    top: 503px;
+    left: 0px;
+    background-position: -1449px 0px;
+/*    background-color: rgba(0,255,0,0.4)*/
+}
+#escena_05 .blancos{
+    background-image: url("../img/robin_hood/robin_sprite_05_blanco.png");
+    width: 409.6px;
+    height: 228px;
+    bottom: 0px;
+    right: 60px;
+}
+#escena_05 .robin{
+    background-image: url("../img/robin_hood/robin_sprite_05_robin.png");
+    width: 372.6px;
+    height: 388px;
+    bottom: -10px;
+    left: -86px;
+}
+#escena_05 .bandera1{
+    background-image: url("../img/robin_hood/robin_sprite_05_bandera1.png");
+    width: 113px;
+    height: 36px;
+    top: 150px;
+    left: -100px;
+}
+#escena_05 .bandera2,
+#escena_06 .bandera2{
+    background-image: url("../img/robin_hood/robin_sprite_05_bandera2.png");
+    width: 160px;
+    height: 52px;
+    top: 320px;
+    left: 455px;
+}
+#escena_05 .bandera3,
+#escena_06 .bandera3{
+    background-image: url("../img/robin_hood/robin_sprite_05_bandera3.png");
+    width: 141px;
+    height: 29px;
+    top: 435px;
+    left: 1030px;
+}
+#escena_05 .bandera4,
+#escena_06 .bandera4{
+    background-image: url("../img/robin_hood/robin_sprite_05_bandera4.png");
+    width: 125px;
+    height: 38px;
+    top: 170px;
+    left: 1552px;
+}
+#escena_06 .fondo{           
+    background-image: url("../img/robin_hood/robin_fondo_esc6.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_07.jpg");*/
+}
+#escena_06 .bandera2{    top: 360px;    left: 264px;    }
+#escena_06 .bandera3{    top: 840px;    left: 832px;    }
+#escena_06 .bandera4{    top: 350px;    left: 1572px;    }
+
+#escena_06 .hombre1{
+    background-image: url("../img/robin_hood/robin_sprite_06_hombre1.png");
+    width: 104.6px;
+    height: 124px;
+    top: 570px;
+    left: -66px;
+}
+#escena_06 .hombre2{
+    background-image: url("../img/robin_hood/robin_sprite_06_hombre2.png");
+    width: 86px;
+    height: 124px;
+    top: 627px;
+    left: 69px;
+}
+#escena_06 .mujer{
+    background-image: url("../img/robin_hood/robin_sprite_06_mujer.png");
+    width: 102.6px;
+    height: 102px;
+    top: 670px;
+    left: 225px;
+}
+#escena_06 .dorado{
+    background-image: url("../img/robin_hood/robin_sprite_06_dorado.png");
+    width: 898px;
+    height: 507px;
+    bottom: -15px;
+    left: 345px;
+}
+
+#escena_06 .palco1{
+    top: 598px;
+    left: -178px;
+}
+
+
+#escena_07 .fondo{ 
+    background-image: url("../img/robin_hood/robin_fondo_esc7.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_08.jpg");*/
+}
+
+#escena_07 .caballo{
+    background-image: url("../img/robin_hood/robin_sprite_07_caballo.png");
+    width: 244px;
+    height: 297px;
+    top: 590px;
+    right: 20px;
+}
+#escena_07 .soldado1{
+    background-image: url("../img/robin_hood/robin_sprite_07_soldado1.png");
+    width: 162px;
+    height: 212px;
+    top: 565px;
+    left: -110px;
+}
+#escena_07 .soldado2{
+    background-image: url("../img/robin_hood/robin_sprite_07_soldado2.png");
+    width: 174px;
+    height: 219px;
+    top: 617px;
+    left: 167px;
+}
+#escena_07 .principe{
+    background-image: url("../img/robin_hood/robin_sprite_07_principe.png");
+    width: 129.6px;
+    height: 144px;
+    top: 660px;
+    left: 94px;
+}
+#escena_07 .hombre1{
+    background-image: url("../img/robin_hood/robin_sprite_07_hombre1.png");
+    width: 206px;
+    height: 369px;
+    bottom: -200px;
+    left: 828px;
+}
+#escena_07 .hombre2{
+    background-image: url("../img/robin_hood/robin_sprite_07_hombre2.png");
+    width: 240px;
+    height: 253px;
+    bottom: -50px;
+    left: 1000px;
+}
+#escena_07 .nena{
+    background-image: url("../img/robin_hood/robin_sprite_07_nena.png");
+    width: 123.5px;
+    height: 159px;
+    bottom: -63px;
+    left: 221px;
+}
+#escena_07 .mujer1{
+    background-image: url("../img/robin_hood/robin_sprite_07_mujer1.png");
+    width: 188.6px;
+    height: 376px;
+    bottom: -170px;
+    left: 450px;
+}
+#escena_07 .mujer2{
+    background-image: url("../img/robin_hood/robin_sprite_07_mujer2.png");
+    width: 282.6px;
+    height: 465px;
+    bottom: -385px;
+    left: 1380px;
+}
+#escena_07 .robin{
+    background-image: url("../img/robin_hood/robin_sprite_07_robin.png");
+    width: 484px;
+    height: 394px;
+    top: 325px;
+    left: 430px;
+/*    opacity: 0.5;*/
+/*    background-color: rgba(255,0,24,0.6);*/
+}
+
+#escena_08 .fondo{ 
+    background-image: url("../img/robin_hood/robin_fondo_esc8.jpg");
+/*    background-image: url("../img/robin_hood/normalizado_09.jpg");*/
+}
+
+#escena_08 .mujer1{
+    background-image: url("../img/robin_hood/robin_sprite_08_mujer1.png");
+    width: 154px;
+    height: 199px;
+    bottom: 190px;
+    left: -2px;
+}
+#escena_08 .nena{
+    background-image: url("../img/robin_hood/robin_sprite_08_nena.png");
+    width: 109.6px;
+    height: 123px;
+    bottom: 130px;
+    left: 114px;
+}
+#escena_08 .nene{
+    background-image: url("../img/robin_hood/robin_sprite_08_nene.png");
+    width: 77.6px;
+    height: 117px;
+    bottom: 140px;
+    left: 250px;
+}
+#escena_08 .hombre{
+    background-image: url("../img/robin_hood/robin_sprite_08_hombre.png");
+    width: 141.6px;
+    height: 198px;
+    bottom: 150px;
+    left: 1434px;
+}
+#escena_08 .mujer2{
+    background-image: url("../img/robin_hood/robin_sprite_08_mujer2.png");
+    width: 142px;
+    height: 217px;
+    bottom: 168px;
+    left: 1710px;
+}
+#escena_08 .robin{
+    background-image: url("../img/robin_hood/robin_sprite_08_robin.png");
+    width: 600px;
+    height: 540px;
+    bottom: -150px;
+    left: 220px;
+}
+#escena_08 .monedas{
+    background-image: url("../img/robin_hood/robin_sprite_08_monedas.png");
+    width: 537.5px;
+    height: 461px;
+    bottom: -182px;
+    left: 220px;
+}
+
+#escena_00 .btn_interact{ top: 570px; left: 1350px; }
+
+#escena_01 .btn_interact{ top: 600px; left: 850px; }
+
+#escena_02 .btn_interact{ top: 390px; left: 480px; }
+
+#escena_03 .btn_interact{ top: 570px; left: 910px;}
+
+#escena_04 .btn_interact{ top: 562px; left: 920px; }
+
+#escena_05 .btn_interact{ top: 735px; left: 179px; }
+
+#escena_06 .btn_interact{ top: 420px; left: 805px; }
+
+#escena_07 .btn_interact{ top: 600px; left: 1210px;}
+
+#escena_08 .btn_interact{ top: 650px; left: 990px;}
+
+
+
+
+
+
+
+
+
+
+
