@@ -400,7 +400,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         en_la_puerta.play(0);
         let vagabundo = ANIM.getTlAnimacionesSprite('01','vagabundo',3,     0.3,5,7,false);
         vagabundo.play(0);
-    }, */
+    }, 
     animaEscena3:() => {
         let de_violeta = ANIM.getTlAnimacionesSprite('03','de_violeta',4, 0.5,2.1,3,true);
         de_violeta.play(0);
@@ -418,7 +418,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         gato.play(0);
         let robin = ANIM.getTlAnimacionesSprite('03','robin',6, 1.3,2.5,3,false);
         robin.play(0);
-    }, 
+    }, */
     animaEscena4:() => {
         let dorado = ANIM.getTlAnimacionesSprite('04','dorado',3, 0.5,2.1,3,true);
         dorado.play(0);
@@ -814,6 +814,54 @@ SteppedEase.config(2), immediateRender:false})
         
         ANIM.anim_interact_2.pause();
         
+        /* btn.click(function(){
+                        $(this).css({"display":"none"});
+                        ANIM.animaEscena3();
+                        Player.playSoundFX('risa_ninos',true);
+                        ANIM.fadeVolume('risa_ninos',0,1,7);
+                       
+                     //(cual, waitFor=4, cuantoDura=14, cuantasVeces = 1, cuantoDejoAlFinal = 0, volume=1, fade = false, fadeFrom = 12, volFadeTo = 0) => {
+                     ANIM.waitForSound('risa_mujer',2,1.4,0,7,0.7);
+                     ANIM.waitForSound('monedas1',0.5,1.47,0,0.2,0.4);
+//                     ANIM.waitForSound('monedas2',0.1,1.7,0,2.7);
+                });
+                 break; */
+        let de_violeta_3 = ANIM.getTlAnimacionesSprite('03','de_violeta',4, 0.5,2.1,3,true);
+        de_violeta_3.pause(0);
+        let senora1_3 = ANIM.getTlAnimacionesSprite('03','senora1',4, 0.5,2.3,3,true);
+        senora1_3.pause(0);
+        let senora2_3 = ANIM.getTlAnimacionesSprite('03','senora2',5, 0.5,1.9,1,true);
+        senora2_3.pause(0);
+        let de_verde_3 = ANIM.getTlAnimacionesSprite('03','de_verde',4, 0.5,3,1,true);
+        de_verde_3.pause(0);
+        let nena_3 = ANIM.getTlAnimacionesSprite('03','nena',5, 0.5,2.7,5,true);
+        nena_3.pause(0);
+        let nene_3 = ANIM.getTlAnimacionesSprite('03','nene',3, 0.5,2.5,2,true);
+        nene_3.pause(0);
+        let gato_3 = ANIM.getTlAnimacionesSprite('03','gato',3, 0.5,2.5,3,true);
+        gato_3.pause(0);
+        let robin_3 = ANIM.getTlAnimacionesSprite('03','robin',6, 1.3,2.5,3,false);
+        robin_3.pause(0);
+        
+        ANIM.anim_interact_3 = new TimelineMax(); // creo la interacción
+        ANIM.anim_interact_3
+        
+            .addLabel('inicio')
+            .addCallback(function(){
+                de_violeta_3.play(0);
+                senora1_3.play(0);
+                senora2_3.play(0);
+                de_verde_3.play(0);
+                nena_3.play(0);
+                nene_3.play(0);
+                gato_3.play(0);
+                robin_3.play(0);
+            })
+           
+            .addLabel('final')
+            ;
+        ANIM.anim_interact_3.pause();
+
         /*
          getTlAnimacionesSprite:(escena,clase,frames, timeOn=1, timeOff = 0, repeatOn=1, yoyo=false, repeatOff = -1)
         */
@@ -1009,6 +1057,7 @@ SteppedEase.config(1),immediateRender:false})
             ANIM.anim_interact_0,
             ANIM.anim_interact_1,
             ANIM.anim_interact_2,
+            ANIM.anim_interact_3,
             ANIM.anim_interact_4,
             ANIM.anim_interact_5,
             ANIM.anim_interact_6,
@@ -1139,12 +1188,12 @@ SteppedEase.config(1),immediateRender:false})
                     });
                 break;
              case 1:
-                 btn.click(function(){
-                        $(this).css({"display":"none"});
-                        ANIM.anim_interact_1.eventCallback("onComplete", muestralo, [$(this), cb]);   
-                        ANIM.anim_interact_1.play(0);
-                     
-                });
+                    btn.click(function(){
+                            $(this).css({"display":"none"});
+                            ANIM.anim_interact_1.eventCallback("onComplete", muestralo, [$(this), cb]);   
+                            ANIM.anim_interact_1.play(0);
+                        
+                    });
                 break;
             case 2:
                     btn.click(function(){
@@ -1154,18 +1203,13 @@ SteppedEase.config(1),immediateRender:false})
                     });
                  break;
              case 3:
-                  btn.click(function(){
+                    btn.click(function(){
                         $(this).css({"display":"none"});
-                        ANIM.animaEscena3();
-                        Player.playSoundFX('risa_ninos',true);
-                        ANIM.fadeVolume('risa_ninos',0,1,7);
-                       
-                     //(cual, waitFor=4, cuantoDura=14, cuantasVeces = 1, cuantoDejoAlFinal = 0, volume=1, fade = false, fadeFrom = 12, volFadeTo = 0) => {
-                     ANIM.waitForSound('risa_mujer',2,1.4,0,7,0.7);
-                     ANIM.waitForSound('monedas1',0.5,1.47,0,0.2,0.4);
-//                     ANIM.waitForSound('monedas2',0.1,1.7,0,2.7);
-                });
-                 break;
+                        ANIM.anim_interact_3.eventCallback("onComplete", muestralo, [$(this), cb]);   
+                        ANIM.anim_interact_3.play(0);
+                        
+                    });
+                break;
             case 4:
                     btn.click(function(){
                         $(this).css({"display":"none"});
