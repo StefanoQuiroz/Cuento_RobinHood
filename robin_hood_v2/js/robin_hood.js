@@ -750,17 +750,17 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
 
             .addCallback(function(){
                 Player.playSoundFX('monedas2');
-                ANIM.fadeVolume('monedas2',1,0,5);
+                //ANIM.fadeVolume('monedas2',1,0,5);
                 //Player.cambiaVolume('llanto_chicos',0.6);
              }, "-=0.5")
             //rey y soldado
             .fromTo(`#escena_01 .principe`,1.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:1}, 4)
             .fromTo(`#escena_01 .soldado`,2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-700% 0%`, ease:SteppedEase.config(7)}, 4)
             //Campesino
-            .fromTo(`#escena_01 .en_la_puerta`,0.8,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 5)
+            .fromTo(`#escena_01 .en_la_puerta`,1.0,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 7)
             //Niño de amarillo
-            .fromTo(`#escena_01 .de_amarillo`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 7)
-            .fromTo(`#escena_01 .vagabundo`,0.3,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:2}, 7)
+            .fromTo(`#escena_01 .de_amarillo`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 10)
+            .fromTo(`#escena_01 .vagabundo`,0.3,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:2}, 10)
             .addLabel('final');
         ANIM.anim_interact_1.pause();
         
@@ -814,52 +814,37 @@ SteppedEase.config(2), immediateRender:false})
         
         ANIM.anim_interact_2.pause();
         
-        /* btn.click(function(){
-                        $(this).css({"display":"none"});
-                        ANIM.animaEscena3();
-                        Player.playSoundFX('risa_ninos',true);
-                        ANIM.fadeVolume('risa_ninos',0,1,7);
-                       
-                     //(cual, waitFor=4, cuantoDura=14, cuantasVeces = 1, cuantoDejoAlFinal = 0, volume=1, fade = false, fadeFrom = 12, volFadeTo = 0) => {
-                     ANIM.waitForSound('risa_mujer',2,1.4,0,7,0.7);
-                     ANIM.waitForSound('monedas1',0.5,1.47,0,0.2,0.4);
-//                     ANIM.waitForSound('monedas2',0.1,1.7,0,2.7);
-                });
-                 break; */
-        let de_violeta_3 = ANIM.getTlAnimacionesSprite('03','de_violeta',4, 0.5,2.1,3,true);
-        de_violeta_3.pause(0);
-        let senora1_3 = ANIM.getTlAnimacionesSprite('03','senora1',4, 0.5,2.3,3,true);
-        senora1_3.pause(0);
-        let senora2_3 = ANIM.getTlAnimacionesSprite('03','senora2',5, 0.5,1.9,1,true);
-        senora2_3.pause(0);
-        let de_verde_3 = ANIM.getTlAnimacionesSprite('03','de_verde',4, 0.5,3,1,true);
-        de_verde_3.pause(0);
-        let nena_3 = ANIM.getTlAnimacionesSprite('03','nena',5, 0.5,2.7,5,true);
-        nena_3.pause(0);
-        let nene_3 = ANIM.getTlAnimacionesSprite('03','nene',3, 0.5,2.5,2,true);
-        nene_3.pause(0);
-        let gato_3 = ANIM.getTlAnimacionesSprite('03','gato',3, 0.5,2.5,3,true);
-        gato_3.pause(0);
-        let robin_3 = ANIM.getTlAnimacionesSprite('03','robin',6, 1.3,2.5,3,false);
-        robin_3.pause(0);
-        
         ANIM.anim_interact_3 = new TimelineMax(); // creo la interacción
         ANIM.anim_interact_3
-        
             .addLabel('inicio')
+            //Cuatro Campesinos
             .addCallback(function(){
-                de_violeta_3.play(0);
-                senora1_3.play(0);
-                senora2_3.play(0);
-                de_verde_3.play(0);
-                nena_3.play(0);
-                nene_3.play(0);
-                gato_3.play(0);
-                robin_3.play(0);
-            })
-           
-            .addLabel('final')
-            ;
+                Player.playSoundFX('risa_mujer');
+                //ANIM.fadeVolume('risa_mujer',1,0,5);
+                Player.cambiaVolume('risa_mujer', 1);
+            }, 0)
+            .addCallback(function(){
+                Player.playSoundFX('monedas2');
+                //ANIM.fadeVolume('monedas2',1,0,5);
+                Player.cambiaVolume('monedas2', 1);
+             }, 0.1)
+            .fromTo(`#escena_03 .de_violeta`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4), repeat:2}, 0)
+            .fromTo(`#escena_03 .senora1`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4), repeat:2}, 0)
+            .fromTo(`#escena_03 .senora2`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:2}, 0)
+            .fromTo(`#escena_03 .de_verde`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4), repeat:2}, 0)
+            .addCallback(function(){
+                Player.playSoundFX('risa_ninos');
+                ANIM.fadeVolume('risa_ninos',1,0,8);
+                //Player.cambiaVolume('risa_ninos', 1);
+             }, "-=0.5")
+            //Niño de la calle
+            .fromTo(`#escena_03 .nene`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:15}, 2)
+            //Niña de la calle
+            .fromTo(`#escena_03 .nena`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:13}, 3)
+            //Robin
+            .fromTo(`#escena_03 .gato`,1.2,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:4}, 9)
+            .fromTo(`#escena_03 .robin`,8,{backgroundPosition:'0% 0%'},{backgroundPosition:`-600% 0%`, ease:SteppedEase.config(6)}, 9)
+            .addLabel('final');
         ANIM.anim_interact_3.pause();
 
         /*
