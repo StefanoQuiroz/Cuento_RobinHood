@@ -742,7 +742,6 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             .addCallback(function(){
                 Player.playSoundFX('llanto_chicos');
                 ANIM.fadeVolume('llanto_chicos',1,0,5);
-                //Player.cambiaVolume('llanto_chicos',0.6);
              }, 0)
             //Niños
             .fromTo(`#escena_01 .de_rosa`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:1}, 2)
@@ -750,8 +749,6 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
 
             .addCallback(function(){
                 Player.playSoundFX('monedas2');
-                //ANIM.fadeVolume('monedas2',1,0,5);
-                //Player.cambiaVolume('llanto_chicos',0.6);
              }, "-=0.5")
             //rey y soldado
             .fromTo(`#escena_01 .principe`,1.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:1}, 4)
@@ -820,12 +817,10 @@ SteppedEase.config(2), immediateRender:false})
             //Cuatro Campesinos
             .addCallback(function(){
                 Player.playSoundFX('risa_mujer');
-                //ANIM.fadeVolume('risa_mujer',1,0,5);
                 Player.cambiaVolume('risa_mujer', 1);
             }, 0)
             .addCallback(function(){
                 Player.playSoundFX('monedas2');
-                //ANIM.fadeVolume('monedas2',1,0,5);
                 Player.cambiaVolume('monedas2', 1);
              }, 0.1)
             .fromTo(`#escena_03 .de_violeta`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4), repeat:2}, 0)
@@ -835,7 +830,6 @@ SteppedEase.config(2), immediateRender:false})
             .addCallback(function(){
                 Player.playSoundFX('risa_ninos');
                 ANIM.fadeVolume('risa_ninos',1,0,8);
-                //Player.cambiaVolume('risa_ninos', 1);
              }, "-=0.5")
             //Niño de la calle
             .fromTo(`#escena_03 .nene`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3), repeat:15}, 2)
