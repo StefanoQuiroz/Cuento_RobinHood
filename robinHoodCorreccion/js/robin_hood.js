@@ -96,6 +96,9 @@ let JSON_CUENTO = {
         {nombre:"llanto_mujer",url:"audio/robin_hood/fx/llanto_mujer.mp3"},
         {nombre:"monedas1",url:"audio/robin_hood/fx/monedas1.mp3"},
         {nombre:"monedas2",url:"audio/robin_hood/fx/monedas2.mp3"},
+        {nombre:"monedas3",url:"audio/robin_hood/fx/monedas3.mp3"},
+        {nombre:"monedas3",url:"audio/robin_hood/fx/monedas3.mp3"},
+        {nombre:"moneyCoins",url:"audio/robin_hood/fx/moneyCoins.mp3"},
         {nombre:"flecha_hit1",url:"audio/robin_hood/fx/flecha_hit1.mp3"},
         {nombre:"flecha_hit2",url:"audio/robin_hood/fx/flecha_hit2.mp3"},
         {nombre:"flecha_hit3",url:"audio/robin_hood/fx/flecha_hit3.mp3"},
@@ -108,6 +111,7 @@ let JSON_CUENTO = {
         {nombre:"musica_final",url:"audio/robin_hood/fx/musica_final.mp3"},
         {nombre:"ehhe",url:"audio/robin_hood/fx/ehhe.mp3"},
         {nombre:"frase_final",url:"audio/robin_hood/fx/frase_final.mp3"},
+        {nombre:"grito_de_lobo",url:"audio/robin_hood/fx/grito_de_lobo.mp3"},
     ], 
     n_escena:0, 
     escenas: 
@@ -338,7 +342,7 @@ let JSON_CUENTO = {
                     tiempo:[19.5,25,1.5] 
                 },
                 {
-                    texto: 'Y colorín colorado, la justicia ha ganado y pasó por un zapatito roto, para que mañana les cuente otro.',
+                    texto: 'Y colorín colorado, la justicia ha ganado. Y pasó por un zapatito roto, para que mañana les cuente otro.',
                     tiempo:[25.5,37.5,0.5] 
                 },
                 
@@ -632,6 +636,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             ANIM.animaEscena5();
             ANIM.main_tl.pause();
             ANIM.interactividad(5);
+            Player.playSoundFX('musica_inicio', true);
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
@@ -679,6 +684,12 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
 //            ANIM.animaEscena8();
             ANIM.main_tl.pause();
             ANIM.interactividad(8);
+            ANIM.waitForSound('publico_feliz',0,23,0); //<-- es el mismo del 7
+            ANIM.waitForSound('monedas3',0,3,0);
+            ANIM.fadeVolume('publico_feliz',0,1,3);
+            ANIM.waitForSound('ehhe',Utils.randomInt(9,11),2.5,Utils.randomInt(3,11)); 
+            Player.playSoundFX('musica_final',true);
+            Player.cambiaVolume('musica_final', 0.3);
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
@@ -748,11 +759,11 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             .fromTo(`#escena_01 .de_azul`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:1}, 2)
 
             .addCallback(function(){
-                Player.playSoundFX('monedas2');
+                Player.playSoundFX('monedas3');
              }, "-=0.5")
             //rey y soldado
-            .fromTo(`#escena_01 .principe`,1.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:1}, 4)
-            .fromTo(`#escena_01 .soldado`,2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-700% 0%`, ease:SteppedEase.config(7)}, 4)
+            .fromTo(`#escena_01 .principe`,1.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(5), repeat:2}, 4)
+            .fromTo(`#escena_01 .soldado`,2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-700% 0%`, ease:SteppedEase.config(7), repeat:1}, 4)
             //Campesino
             .fromTo(`#escena_01 .en_la_puerta`,1.0,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:SteppedEase.config(2), repeat:2}, 7)
             //Niño de amarillo
@@ -769,7 +780,10 @@ SteppedEase.config(3)})
                 .fromTo(`#escena_02 .carruaje`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-100% 0%`, ease:
 SteppedEase.config(1)},'-=0.5')
             .addCallback(function(){
+               Player.playSoundFX('grito_de_lobo');
                Player.playSoundFX('flecha_hit3');
+               Player.playSoundFX('moneyCoins');
+               ANIM.fadeVolume('moneyCoins',1,0,9);
             })
                 .fromTo(`#escena_02 .robin`,0.3,{backgroundPosition:'-300% 0%'},{backgroundPosition:`-500% 0%`, ease:
 SteppedEase.config(2), immediateRender:false})
@@ -803,6 +817,7 @@ SteppedEase.config(3), immediateRender:false})
 SteppedEase.config(1), immediateRender:false},'-=0.5')
             .addCallback(function(){
                Player.playSoundFX('flecha_hit1');
+               Player.playSoundFX('grito_de_lobo');
             })
             .fromTo(`#escena_02 .robin`,0.3,{backgroundPosition:'-300% 0%'},{backgroundPosition:`-500% 0%`, ease:
 SteppedEase.config(2), immediateRender:false})
@@ -820,8 +835,8 @@ SteppedEase.config(2), immediateRender:false})
                 Player.cambiaVolume('risa_mujer', 1);
             }, 0)
             .addCallback(function(){
-                Player.playSoundFX('monedas2');
-                Player.cambiaVolume('monedas2', 1);
+                Player.playSoundFX('monedas3');
+                Player.cambiaVolume('monedas3', 1);
              }, 0.1)
             .fromTo(`#escena_03 .de_violeta`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4), repeat:2}, 0)
             .fromTo(`#escena_03 .senora1`,0.7,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4), repeat:2}, 0)
@@ -962,16 +977,14 @@ SteppedEase.config(1), repeat:1,yoyo:true},'-=1')
         ANIM.anim_interact_6
             .addCallback(function(){
                Player.playSoundFX('publico');
-                ANIM.fadeVolume('publico',0,1,2);
             })
-            .fromTo(`#escena_06 .dorado`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:
-SteppedEase.config(3),repeat:3,yoyo:true})
+            .fromTo(`#escena_06 .dorado`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3),repeat:3,yoyo:true})
             .fromTo(`#escena_06 .hombre1`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:
-SteppedEase.config(2), repeat:7,yoyo:true},'-=4')
+SteppedEase.config(2), repeat:11,yoyo:true},'-=4')
             .fromTo(`#escena_06 .hombre2`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-100% 0%`, ease:
-SteppedEase.config(1), repeat:7,yoyo:true},'-=4')
+SteppedEase.config(1), repeat:12,yoyo:true},'-=4')
             .fromTo(`#escena_06 .mujer`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:
-SteppedEase.config(2), repeat:7,yoyo:true},'-=4')
+SteppedEase.config(2), repeat:13,yoyo:true},'-=8')
             .addCallback(function(){
                 ANIM.fadeVolume('publico',1,0,2);
             })
@@ -1216,6 +1229,7 @@ SteppedEase.config(1),immediateRender:false})
                         ANIM.anim_interact_7.eventCallback("onComplete", muestralo, [$(this), cb]);   
                         ANIM.anim_interact_7.play(0);
                         ANIM.waitForSound('publico_feliz',0,23,0);
+                        ANIM.waitForSound('monedas3',0,3,0);
                     });
                  break;
              case 8:
@@ -1228,17 +1242,18 @@ SteppedEase.config(1),immediateRender:false})
                                 .addCallback(function(){
                                     Player.playSoundFX('frase_final'+IDIOMA);
                                 })
-                                .addCallback(function(){
+                                /* .addCallback(function(){
                                     ANIM.anim_interact_8.play(0);
                                     ANIM.waitForSound('publico_feliz',0,23,0); //<-- es el mismo del 7
                                     ANIM.fadeVolume('publico_feliz',0,1,3);
                                     ANIM.waitForSound('ehhe',Utils.randomInt(9,11),2.5,Utils.randomInt(3,11)); 
                                     Player.playSoundFX('musica_final',true);
                                     ANIM.animaEscena8();
-                                },'+=5')
+                                },'+=5') */
                             ;
                         }
                         ANIM.tl_del_final.play(0);
+                        ANIM.anim_interact_8.play(0); 
                         
                     });
                  break;

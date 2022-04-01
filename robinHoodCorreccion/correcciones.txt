@@ -1,0 +1,33 @@
+ESCENA 2: 
+
+El sonidos De las monedas debe ser más alto, más largo y más notorio.
+
+ESCENA 3:
+
+Que al sonar las flechas haya también sonidos de monedas (están dentro de las bolsas)
+
+Que suene el grito del funcionario del rey (en carpeta como “grito lobo”)
+
+ESCENA 4:
+
+SONIDO DE MONEDAS más alto, más largo y más notorio al final.
+
+ESCENA 6
+
+REPETIR MÚSICA INICIAL cuando termine la narración en loop infinito.
+
+ESCENA 7
+
+Alargar gritos de la multitud unos 4 segundos más.
+
+ESCENA 8 
+
+El sonidos De las monedas debe ser más alto, más largo y más notorio.
+
+ESCENA 9:
+
+Falta un punto en la frase del final. “…la justicia ha ganado. Y pasó por un zapatito…"
+
+Que la música comience apenas termine la narración y suene junto con monedas.
+
+En la interacción solamente el movimiento (la música estará desde antes y hasta el infinito)
