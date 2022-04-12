@@ -1,11 +1,10 @@
 .creditos .imagen_portada,
 #final_cuento .creditos .imagen_portada{
-/*    background-image: url(../img/robin_hood/imagen_portada.jpg);*/
-/*
+    display: grid;
+    background-image: url("../img/robin_hood/normalizado_09.jpg");
     background-size: cover;
     background-position: 50%;
-    background-repeat: no-repeat;
-*/
+    background-repeat: no-repeat;    
 /*    background-color: #fff;*/
 }
 

@@ -1,13 +1,12 @@
 let JSON_CUENTO = {
     nombre:"Robin Hood",
-    tipo:"Cuento de aventuras espaciales / na'h mentira",
-    descripcion:"Descripción bonita y bien redactada",
+    tipo:"Cuento de aventuras",
+    descripcion:"Adaptación libre que narra una de las aventuras de Robin Hood. Está basada en la leyenda popular inglesa del valiente joven que toma la justicia en sus manos enfrentando al rey “Juan sin tierras” para evitar que arrebate a los pobres su dinero. ¿Logrará Robin sortear persecuciones y emboscadas del rey para salir ileso en su cruzada?",
     creditos:[
-                ["Adaptación:","Nadie"],
-                ["Ilustraciones:","Nadie"],
-                ["Narración:","Nadie"],
-                ["Arreglos musicales:","Nadie"],
-                ["Edición a cargo de:","Constanza Ried Silva<br>Verónica Vives Cofré<br>Fundación Entrelíneas"],
+                ["Adaptación:","Copec"],
+                ["Ilustraciones:","Copec"],
+                ["Narración:","Constanza Ried Silva"],
+                ["Edición a cargo de:","Copec"],
                 ["Montaje y desarrollo web:","Agencia Match"],
                 ["Créditos de sonidos:","Revise detalles <a href='#' target='_blank'>aquí</a>"] 
     ],
@@ -977,6 +976,7 @@ SteppedEase.config(1), repeat:1,yoyo:true},'-=1')
         ANIM.anim_interact_6
             .addCallback(function(){
                Player.playSoundFX('publico');
+               ANIM.fadeVolume('publico',1,0,7);
             })
             .fromTo(`#escena_06 .dorado`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:SteppedEase.config(3),repeat:3,yoyo:true})
             .fromTo(`#escena_06 .hombre1`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-200% 0%`, ease:
