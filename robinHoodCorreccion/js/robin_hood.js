@@ -97,6 +97,7 @@ let JSON_CUENTO = {
         {nombre:"monedas2",url:"audio/robin_hood/fx/monedas2.mp3"},
         {nombre:"monedas3",url:"audio/robin_hood/fx/monedas3.mp3"},
         {nombre:"monedas3",url:"audio/robin_hood/fx/monedas3.mp3"},
+        {nombre:"soldados_grunhendo",url:"audio/robin_hood/fx/soldados_grunhendo.mp3"},
         {nombre:"moneyCoins",url:"audio/robin_hood/fx/moneyCoins.mp3"},
         {nombre:"flecha_hit1",url:"audio/robin_hood/fx/flecha_hit1.mp3"},
         {nombre:"flecha_hit2",url:"audio/robin_hood/fx/flecha_hit2.mp3"},
@@ -543,6 +544,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         
         ANIM.main_tl.addCallback(function(){
             Player.playSoundFX('musica_torneo');
+            Player.cambiaVolume('musica_torneo', 0.2);
         },"5_0_audio");
         
         /*INICIO*/
@@ -779,18 +781,21 @@ SteppedEase.config(3)})
                 .fromTo(`#escena_02 .carruaje`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-100% 0%`, ease:
 SteppedEase.config(1)},'-=0.5')
             .addCallback(function(){
-               Player.playSoundFX('grito_de_lobo');
                Player.playSoundFX('flecha_hit3');
                Player.playSoundFX('moneyCoins');
                ANIM.fadeVolume('moneyCoins',1,0,9);
             })
                 .fromTo(`#escena_02 .robin`,0.3,{backgroundPosition:'-300% 0%'},{backgroundPosition:`-500% 0%`, ease:
 SteppedEase.config(2), immediateRender:false})
-            .addCallback(function(){/*nada*/},`+=0.5`)
+            .addCallback(function(){},`+=0.5`)
                 .fromTo(`#escena_02 .robin`,0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:`-300% 0%`, ease:
 SteppedEase.config(3), immediateRender:false})
             .fromTo(`#escena_02 .carruaje`,0.5,{backgroundPosition:'-100% 0%'},{backgroundPosition:`-200% 0%`, ease:
 SteppedEase.config(1), immediateRender:false},'-=0.5')
+            .addCallback(function(){
+                Player.playSoundFX('grito_de_lobo');
+            },'-=0.5')
+
             .addCallback(function(){
                Player.playSoundFX('flecha_hit1');
             })
@@ -807,6 +812,9 @@ SteppedEase.config(2), immediateRender:false},'-=0.5')
             .addCallback(function(){
                Player.playSoundFX('flecha_hit3');
             })
+            .addCallback(function(){
+                Player.playSoundFX('grito_de_lobo');
+            },'-=0.9')
             .fromTo(`#escena_02 .robin`,0.3,{backgroundPosition:'-300% 0%'},{backgroundPosition:`-500% 0%`, ease:
 SteppedEase.config(2), immediateRender:false})
             .addCallback(function(){/*nada*/},`+=1`)
@@ -816,8 +824,10 @@ SteppedEase.config(3), immediateRender:false})
 SteppedEase.config(1), immediateRender:false},'-=0.5')
             .addCallback(function(){
                Player.playSoundFX('flecha_hit1');
-               Player.playSoundFX('grito_de_lobo');
             })
+            .addCallback(function(){
+                Player.playSoundFX('grito_de_lobo');
+            },'+=0.9')
             .fromTo(`#escena_02 .robin`,0.3,{backgroundPosition:'-300% 0%'},{backgroundPosition:`-500% 0%`, ease:
 SteppedEase.config(2), immediateRender:false})
             .addCallback(function(){/*nada*/},`+=1`)
@@ -887,14 +897,18 @@ SteppedEase.config(2), immediateRender:false})
                 fuegoB.play(0);
                 fuegoC.play(0);
             })
-            .fromTo(`#escena_04 .principe`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4)},'+=1')
+            .addCallback(function(){
+                Player.playSoundFX('soldados_grunhendo');
+                ANIM.fadeVolume('soldados_grunhendo',1,0,5);
+            },'-=0.4')
+            .fromTo(`#escena_04 .principe`,1,{backgroundPosition:'0% 0%'},{backgroundPosition:`-400% 0%`, ease:SteppedEase.config(4)},'+=4.5')
             .addCallback(function(){
                 Player.playSoundFX('pergamino');
-            },'-=0.4')
+            },'-=0.1')
             .set(`#escena_04 .fuegos`,{x:258,y:-105},'-=0.2')
             .fromTo(`#escena_04 .principe`,0.1,{backgroundPosition:'-400% 0%'},{backgroundPosition:`-500% 0%`, ease: SteppedEase.config(1),repeat:5,yoyo:true, immediateRender:false})
             .fromTo(`#escena_04 .principe`,0.2,{backgroundPosition:'-400% 0%'},{backgroundPosition:`-500% 0%`, ease:SteppedEase.config(1),repeat:3,yoyo:true, immediateRender:false})
-            .addCallback(function(){/*nada*/},`+=1`)
+            //.addCallback(function(){/*nada*/},`+=1`)
             ;
         
         ANIM.anim_interact_4.pause();
