@@ -825,9 +825,9 @@ SteppedEase.config(1), immediateRender:false},'-=0.5')
             .addCallback(function(){
                Player.playSoundFX('flecha_hit1');
             })
-            .addCallback(function(){
+            /* .addCallback(function(){
                 Player.playSoundFX('grito_de_lobo');
-            },'+=0.9')
+            },'+=0.9') */
             .fromTo(`#escena_02 .robin`,0.3,{backgroundPosition:'-300% 0%'},{backgroundPosition:`-500% 0%`, ease:
 SteppedEase.config(2), immediateRender:false})
             .addCallback(function(){/*nada*/},`+=1`)
